@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>graphics designer website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,800;1,100;1,
+    400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+<section class="sub3-header">
+    <nav>
+        <a href="index.html"><img src="image/logo.png" alt="logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="illustrator.html">Illustrator</a></li>
+                <li><a href="PhotoShop.html">PhotoShop</a></li>
+                <li><a href="painting.html">Painting</a></li>
+                <li><a href="mockup.html">mockup</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>Mockup</h1>
+</section>
+
+
+
+<section class="picture">
+    <h1>Various Kind Of Mockup</h1>
+    <p>A mockup is basically a full model of your website design that is used to present your ideas and 
+        thoughts. It reflects the color, visuals, typography, layout, and other design elements of your 
+        website. The primary objective of creating a mockup design is to share how your website's final 
+        design will look.
+    </p>
+    <div class="picture-row">
+        <div class="picture-col">
+            <img class="img" src="image/1g.jpg" alt="illustrator logo">
+        </div>
+        <div class="picture-col">
+            <img class="img" src="image/2g.jpg" alt="illustrator business card">
+        </div>
+        
+    </div>
+</section>
+<section class="picture">
+    <div class="picture-row">
+        <div class="picture-col">
+            <img class="img" src="image/3g.jpg" alt="illustrator logo">
+        </div>
+        <div class="picture-col">
+            <img class="img" src="image/4g.png" alt="illustrator business card">
+        </div>
+        
+    </div>
+</section>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+<!------- slide ------>
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="image/slide2.png" alt="slide" style="width:100%">
+      <div class="text">mockup</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="image/slide3.png" alt="slide" style="width:100%">
+      <div class="text">mockup</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="image/slide1.jpg" alt="slide" style="width:100%">
+      <div class="text">mockup</div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---- footer------->
+<section class="footer">
+    <h4>ABOUT US</h4>
+    <p>"I feel is the main requirement of the job description and thus I also feel that 
+        I perfectly fit this role."
+    </p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-behance"></i>
+        <i class="fa fa-linkedin"></i>
+        <i class="fa fa-envelope"></i>
+    </div>
+    <p>Contact   <i class="fa fa-volume-control-phone"></i>   by RUPS RUPALI</p>
+</section>
+
+
+
+
+
+
+
+
+
+<!------javascript For Toggle Menu------>
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+
+
+</body>
+</html>
